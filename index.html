@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeWhiz Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" fill="#ffffff" viewBox="0 0 24 24">
+        <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+      </svg>
+      <span>CodeWhiz Quiz</span>
+    </div>
+    <div class="nav-buttons">
+      <button id="theme-toggle" class="btn small">🌞 Light Mode</button>
+      <button id="fullscreen-btn" class="btn small">⛶ Fullscreen</button>
+    </div>
+  </nav>
+
+  <!-- App Container -->
+  <div class="app-container">
+    <!-- Celebration Overlay -->
+    <div id="celebration-overlay"></div>
+
+    <!-- Instructions Screen -->
+    <section id="instructions" class="screen active">
+      <h1>Welcome to CodeWhiz Quiz</h1>
+      <p>This quiz includes 5 questions. You have 20 seconds per question. Good luck!</p>
+      <button id="start-btn" class="btn primary">Start Quiz</button>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quiz" class="screen">
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar">0%</div>
+      </div>
+      <div class="quiz-header">
+        <h2 id="question-title">Question title</h2>
+        <div id="timer">⏱ <span id="time-left">20</span>s</div>
+      </div>
+      <form id="quiz-form"></form>
+      <button id="next-btn" class="btn secondary">Next</button>
+    </section>
+
+    <!-- Result Screen -->
+    <section id="result" class="screen">
+      <h2>Quiz Complete!</h2>
+      <p id="final-score"></p>
+      <div id="celebration-message"></div>
+      <button id="restart-btn" class="btn primary">Restart</button>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CodeWhiz | Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
